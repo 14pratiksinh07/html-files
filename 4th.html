@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation </title>
+    <style type = "text/css">
+        *{
+            background-color: black;
+        }
+        .a{
+           
+            background-color: brown;
+            height: 100px;
+            width: 100px;
+            border: 15px;
+            /* box-shadow: rebeccapurple; */
+            position: relative;
+            animation-duration: 10s;
+            animation-name: a;
+            animation-iteration-count: infinite;
+            transition: all;
+            /* transform: rotateX(180) */
+
+        }
+        @keyframes a{
+            0%{background-color: brown;left: 0px;top: 0px;color: red;transform: rotate(0deg);}
+            25%{background-color: purple;left: 300px;top: 250px;color: white;height:50px ;transform: rotate(90deg);}
+            50%{background-color: blue;left: 300px;top: 0px;color: lawngreen;transform: rotate(180deg);}
+            75%{background-color: yellow;left: 0px;top: 250px;color: navy;border-radius: 50%;transform: rotate(360deg);}
+            100%{background-color:palegreen;left: 0px;top: 0px;color: gold;transform: rotate(0deg);}
+        
+        }
+    </style>
+</head>
+<body>
+    <h1>animation using css</h1>
+    <div class = "a"></div>
+</body>
+</html>
