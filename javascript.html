@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java scripting</title>
+    <script type="text/javascript">
+
+        // functions
+        function Internal_Alert(){
+            alert("Internal alert : ");
+        }
+        function Internal_confirm(){
+            if(confirm("are you sad?")){
+                alert("Yess");
+            }
+            else{
+                alert("noo");
+            }
+        }
+        function Internal_prompt(){
+            var USERNAME=prompt("Enter your username here !");
+            var PASSWORD=prompt("Enter your password here !");
+            alert("username :"+USERNAME + "\n password :" + PASSWORD);
+
+        }
+        function Body_bg_goes_green(){
+            document.body.style.backgroundColor="Green";
+        }
+        function Div_bg_gray(){
+            document.getElementById("Div1").style.backgroundColor="gray";
+        }
+        function custom_color_body(){
+            document.body.style.backgroundColor=prompt("enter colour name : ");
+        }
+        function custom_color_div(){
+            document.getElementById("Div1").style.backgroundColor=prompt("enter colour name for div:");
+        }
+        function colorpickerbody(){
+            document.body.style.backgroundColor=document.getElementById("CP1").value;
+        }
+        
+        function colorpickerdiv(){
+            document.getElementById("Div1").style.backgroundColor=document.getElementById("CP2").value;
+        }
+    </script>
+
+</head>
+<body>
+    <div id="Div1"> Hello Students </div>
+    <hr>
+  <p>button inline</p>
+    <input type="button" value="Alert inline" onclick="alert('alert')"/>&nbsp;&nbsp;
+    <!-- alert will display window of warning or something -->
+    <input type="button" value="confirm inline" onclick="confirm('confirm inline : Are you happy?')"/>&nbsp;&nbsp;
+     <!-- confirm inline asks about confirmation -->
+    <input type="button" value="prompt inline" onclick="prompt('prompt inline : Enter username')"/>&nbsp;&nbsp;
+    <!--   prompt asks to input  -->
+    </hr>
+    <hr>
+    <p>button Internal</p>
+    <input type="button" value="alert internal" onclick="Internal_Alert()"/>&nbsp;&nbsp;
+    <input type="button" value="confirm  internal" onclick="Internal_confirm()"/>&nbsp;&nbsp;
+    <input type="button" value="prompt  internal" onclick="Internal_prompt()"/>&nbsp;&nbsp;
+    </hr>
+    <hr>
+    <p>background color changes</p>
+    <input type="button" value="bg goes green of whole body" onclick="Body_bg_goes_green()"/>&nbsp;&nbsp;
+    <input type="button" value="bg goes grauy for div" onclick="Div_bg_gray()"/>&nbsp;&nbsp;
+    <input type="button" value="custom color for body" onclick="custom_color_body()"/>&nbsp;&nbsp;
+    <input type="button" value="custom color for body" onclick="custom_color_body()"/>&nbsp;&nbsp;
+    <input type="button" value="custom color for div" onclick="custom_color_div()"/>&nbsp;&nbsp;
+    <hr>
+    <p>pick colour</p>
+    <input type="color" id="CP1" value="colour picker for bodyy" onchange="colorpickerbody()"/>&nbsp;&nbsp;
+    <input type="color" id="CP2" value="colour picker for div" onchange="colorpickerdiv()"/>&nbsp;&nbsp;
+</body>
+</html>
