@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script> 
+        function AlertInternal(){
+            if(confirm("are you sure?"))
+            {
+                alert("YES");
+            }
+        else
+        {
+            alert("no");
+        }
+        }
+    
+        
+    </script>
+    <style>
+        #d1{
+            background-color: rgb(224, 178, 178);
+            color: rgb(176, 96, 96);
+            height: 200px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        hello students
+    </div>
+    <hr>
+    <button type="button" onclick="alert('alert i m not ready')">alert inline</button>
+    <button type="button" onclick="confirm('alert i m not ready')">confirm inline</button>
+    <button type="button" onclick="prompt('alert i m not ready')">prompt inline</button>
+    <input type="button" value="Alert Internal" onclick="alertInternal()"/>
+c d3e
+ 
+</body>
+</html>
