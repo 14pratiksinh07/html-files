@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript"></script>
+    <script>
+        var $nameRegex = /^[a-zA-Z]+$/;
+        $(document).ready(function () {
+            $("#nameid").blur(function () {
+                $("#namevalidation").empty();
+                if ($(this).val() == "" || $(this).val() == null) {
+                    $("#namevalidation").html("(*) This field is required...!!!");
+                }
+                else {
+                    if (!$(this).val().match($nameRegex)) {
+                        $("#namevalidation").html("(*)invalid name!!");
+                    }
+                }
+            });
+            $("#nameid").keypress(function (e) {
+                $("#namevalidation").empty();
+                var flag = ((e.which >= 65 && e.which <= 90) || (e.which >= 97 && e.which <= 121));
+                if (flag == false) {
+                    $("#namevalidation").html("Invalid input!!");
+                }
+                return flag;
+            });
+        });
+    </script>
+    <style>
+        small {
+            text-decoration: underline;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    Name: <input type="text" id="nameid" autofocus placeholder="Enter your name "><br>
+    <small id="namevalidation"></small>
+    <br>
+    <input type="submit" value="submit" id="submitid">
+</body>
+
+</html>
